@@ -53,7 +53,8 @@ envs=[
 'WizardOfWor',
 'Zaxxon'
 ]
-seeds = [10000]
+seeds = [10, 100, 1000]
+
 
 class MyProcess(Process):
     def __init__(self, group=None, target=None, name=None, args=(), kwargs={}):
@@ -76,16 +77,15 @@ def call_once(game, seed, use_penal, device, timesteps, pgcoef):
     else:
         return MyProcess(target=subprocess.check_call, args=(['python', '-m', 'baselines.ppo2.run_atari', '--env', game, '--seed', str(seed),
                                          '--gpu', str(device), '--num-timesteps', str(timesteps), '--pg-rate', str(pgcoef)],))
+
+
 def run_all():
-    #counter = 0
     pro_list = list()
     steps = int(10e6)
     for seed in seeds:
         for index,env in enumerate(envs):
             pro_list.append(call_once(env+'NoFrameskip-v4', seed, False, 0, steps, 0))
             pro_list.append(call_once(env+'NoFrameskip-v4', seed, True, 1, steps, 0))
-
-
 
     for p in pro_list:
         p.daemon = True

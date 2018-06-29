@@ -2,8 +2,6 @@ from multiprocessing import Process
 import subprocess
 import time
 
-
-
 # noinspection PyPackageRequirements
 envs = [
     'HalfCheetah-v2',
@@ -14,7 +12,8 @@ envs = [
     'Swimmer-v2',
     'Walker2d-v2'
 ]
-seeds = [0,10,100]
+seeds = [0, 10, 100]
+
 
 class MyProcess(Process):
     def __init__(self, group=None, target=None, name=None, args=(), kwargs={}):

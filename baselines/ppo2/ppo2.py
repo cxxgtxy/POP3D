@@ -39,7 +39,7 @@ class Model(object):
         pg_losses = -ADV * ratio
         pg_losses2 = -ADV * tf.clip_by_value(ratio, 1.0 - CLIPRANGE, 1.0 + CLIPRANGE)
         pg_loss = tf.reduce_mean(tf.maximum(pg_losses, pg_losses2))
-        ppd  = tf.reduce_mean(tf.square(neglogpac - OLDNEGLOGPAC))
+        ppd = tf.reduce_mean(tf.square(neglogpac - OLDNEGLOGPAC))
         clipfrac = tf.reduce_mean(tf.to_float(tf.greater(tf.abs(ratio - 1.0), CLIPRANGE)))
         pg_losses = tf.reduce_mean(pg_losses)
         if args.use_penal:
