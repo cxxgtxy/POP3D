@@ -1,22 +1,23 @@
 # POP3D
-Source code for Policy Optimization with Penalized Point Probability Distance: an Alternative to Proximal Policy Optimization 
+Source code for Policy Optimization With Penalized Point Probability Distance: An Alternative To Proximal Policy Optimization
+(https://arxiv.org/abs/1807.00442)
 # Training
 ## If you desire to run all games once, you can do as follows.
 - Atari 
-```python
+```bash
 python -m baselines.ppo2.run_all_atari
 ```
 - Mujoco
-```python
+```bash
 python -m baselines.ppo2.run_all_mujoco
 ```
 ## If you want to train only one game, take Atari Alien using seed 10 for example
 - Use PPO
-```python
+```bash
 python -m baselines.ppo2.run_atari --env AlienNoFrameskip-v4  --num-timesteps 10000000 --seed 10
 ```
 - Use POP3D
-```python
+```bash
 python -m baselines.ppo2.run_atari --env AlienNoFrameskip-v4  --num-timesteps 10000000 --seed 10 --use-penal 1
 ```
 # Results
