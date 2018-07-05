@@ -23,8 +23,8 @@ setup(name='baselines',
           'click',
           'opencv-python'
       ],
-      description='OpenAI baselines: high quality implementations of reinforcement learning algorithms',
-      author='OpenAI',
-      url='https://github.com/openai/baselines',
-      author_email='gym@openai.com',
+      description='POP3D based on openai baselines.',
+      author='chuxiangxiang',
+      url='https://github.com/cxxgtxy/POP3D.git',
+      author_email='cxxgtxy@gmail.com',
       version='0.1.5')
