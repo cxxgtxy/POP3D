@@ -1,6 +1,6 @@
 # POP3D
 Source code(Tensorflow)for Policy Optimization With Penalized Point Probability Distance: An Alternative To Proximal Policy Optimization
-(https://arxiv.org/abs/1807.00442)
+(https://arxiv.org/abs/1807.00442v2)
 # Prerequisite
 - gym[mujoco,atari]
 - scipy
@@ -13,7 +13,7 @@ Source code(Tensorflow)for Policy Optimization With Penalized Point Probability 
 - tensorflow>=1.4.0
 - opencv-python
 # Training
-## If you desire to run all games(49 Atari or 7 Mujoco), you can do as follows.
+## If you desire to run all games(49 Atari or 7 Mujoco) using 2 GPUs( You can change the task distribution work based on GPU resource), you can do as follows.
 - Atari 
 ```bash
 python -m baselines.ppo2.run_all_atari
