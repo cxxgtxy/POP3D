@@ -1,6 +1,6 @@
 # POP3D
 Source code(Tensorflow)for Policy Optimization With Penalized Point Probability Distance: An Alternative To Proximal Policy Optimization
-(https://arxiv.org/abs/1807.00442v2)
+(https://arxiv.org/pdf/1807.00442.pdf)
 # Prerequisite
 - gym[mujoco,atari]
 - scipy
@@ -34,7 +34,7 @@ python -m baselines.ppo2.run_atari --env AlienNoFrameskip-v4  --num-timesteps 10
 # Results
 You can download  results on three seeds from google drive https://drive.google.com/file/d/1c79TqWn74mHXhLjoTWaBKfKaQOsfD2hg/view?usp=sharing. 
 We release it to make reproduction of this paper easy.
-## Atari results
+## Atari results(PPO, POP3D, TRPO, BASLINES)
 ![Atari](https://github.com/cxxgtxy/POP3D/blob/master/pop3d.png)
 ## Mujoco results
 ![Atari](https://github.com/cxxgtxy/POP3D/blob/master/mujoco.png)
